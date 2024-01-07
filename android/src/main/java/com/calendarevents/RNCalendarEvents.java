@@ -167,7 +167,7 @@ public class RNCalendarEvents extends ReactContextBaseJavaModule implements Perm
         }
 
         if (details.hasKey("recurrence")) {
-            String rule = createRecurrenceRule(details.getString("recurrence"), details.getString("occurrence"));
+            String rule = createRecurrenceRule(details.getString("recurrence"), details.getInt("occurrence"));
             if (rule != null) {
                 eventValues.put(CalendarContract.Events.RRULE, rule);
                 eventValues.put(CalendarContract.Events.DURATION, "PT1H");
