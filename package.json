@@ -5,7 +5,7 @@
   "homepage": "https://github.com/ihsan2/react-native-custom-events-calendar",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ihsan2/react-native-custom-events-calendar"
+    "url": "git+https://github.com/ihsan2/react-native-custom-events-calendar.git"
   },
   "author": "Will McMahan",
   "license": "MIT",
@@ -50,5 +50,11 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "bugs": {
+    "url": "https://github.com/ihsan2/react-native-custom-events-calendar/issues"
+  },
+  "directories": {
+    "example": "example"
   }
 }
