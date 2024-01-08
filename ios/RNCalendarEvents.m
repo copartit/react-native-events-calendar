@@ -246,7 +246,7 @@ RCT_EXPORT_MODULE()
 
         rule = [[EKRecurrenceRule alloc] initRecurrenceWithFrequency:[self frequencyMatchingName:frequency]
                                                                 interval:1
-                                                                    daysOfTheWeek:daysOfTheWeekRecurrence
+                                                                    daysOfTheWeek:nil
                                                                     daysOfTheMonth:nil
                                                                     monthsOfTheYear:nil
                                                                     weeksOfTheYear:nil
