@@ -154,10 +154,6 @@ RCT_EXPORT_MODULE()
         calendarEvent.notes = notes;
     }
 
-    if (alarms) {
-        calendarEvent.alarms = [self createCalendarEventAlarms:alarms];
-    }
-
     if (recurrence) {
         EKRecurrenceRule *rule = [self createRecurrenceRule:recurrence occurrence:occurrence];
         if (rule) {
@@ -249,11 +245,14 @@ RCT_EXPORT_MODULE()
         }
 
         rule = [[EKRecurrenceRule alloc] initRecurrenceWithFrequency:[self frequencyMatchingName:frequency]
-                                                                 daysOfTheMonth:nil
-                                                                 monthsOfTheYear:nil
-                                                                 weeksOfTheYear:nil
-                                                                 daysOfTheYear:nil
-                                                                 end:recurrenceEnd];
+                                                                interval:1
+                                                                    daysOfTheWeek:daysOfTheWeekRecurrence
+                                                                    daysOfTheMonth:nil
+                                                                    monthsOfTheYear:nil
+                                                                    weeksOfTheYear:nil
+                                                                    daysOfTheYear:nil
+                                                                    setPositions:nil
+                                                                    end:recurrenceEnd];
     }
     return rule;
 }
